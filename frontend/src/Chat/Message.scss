@@ -1,0 +1,32 @@
+.message {
+  background-color: transparent;
+}
+
+.is-user .help {
+  font-size: 7px;
+  color: grey;
+}
+
+.message-body {
+  border-radius: 5px;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.is-user .message {
+  flex-grow: 0;
+  max-width: 90vw;
+}
+
+.is-self .columns {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.is-user {
+  --color: var(--user-color);
+}
+
+.is-user .message-body {
+  background: var(--color);
+}
