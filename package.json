@@ -1,17 +1,17 @@
 {
-  "version": "0.0.1",
-  "license": "MIT",
+  "name": "socketio-react-chat-template",
+  "packageManager": "yarn@3.2.4",
   "workspaces": [
     "backend",
     "frontend"
   ],
   "scripts": {
-    "dev": "concurrently -n BACKEND,FRONTEND -c green,yellow -k \"yarn dev:backend\" \"yarn dev:frontend\"",
-    "dev:backend": "yarn --cwd=backend dev",
-    "dev:frontend": "yarn --cwd=frontend dev"
+    "dev": "concurrently -c cyan,green yarn:dev:\\*",
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev:backend": "yarn workspace backend dev"
   },
   "devDependencies": {
-    "concurrently": "^7.2.2",
     "prettier": "^2.7.1"
+    "concurrently": "^7.6.0"
   }
 }

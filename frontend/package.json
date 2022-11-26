@@ -1,7 +1,5 @@
 {
   "name": "frontend",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,22 +10,16 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "moment": "^2.29.4",
-    "prismjs": "^1.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-new-window": "^0.2.1",
-    "react-simple-code-editor": "^0.11.2",
-    "react-use-user-media": "^0.0.0",
     "socket.io-client": "^4.5.1",
     "usehooks-ts": "^2.6.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@types/node": "^18.6.2",
-    "@types/prismjs": "^1.26.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "@types/webrtc": "^0.0.32",
     "@vitejs/plugin-react": "^2.0.0",
     "bulma": "^0.9.4",
     "dotenv": "^16.0.1",
