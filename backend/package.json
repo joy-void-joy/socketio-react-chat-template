@@ -1,6 +1,7 @@
 {
   "name": "backend",
+  "packageManager": "yarn@3.2.4",
   "scripts": {
-    "dev": "python backend"
+    "dev": "poetry run python ."
   }
 }
