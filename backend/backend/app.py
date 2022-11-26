@@ -1,8 +1,7 @@
-import aiohttp
+from asgiref.wsgi import WsgiToAsgi
 import socketio
 
 from environs import Env
-
 from . import chat
 
 env = Env()
@@ -13,13 +12,14 @@ sio = socketio.AsyncServer(
     cors_allowed_origins=[
         f"http://localhost:{env.str('BACKEND_PORT')}",
         f"http://localhost:{env.str('FRONTEND_PORT')}",
-    ]
+    ],
+    async_mode="asgi",
 )
-app = aiohttp.web.Application()
-router = aiohttp.web.RouteTableDef()
-sio.attach(app)
 
 
 @sio.event
 async def ask_message(sid: str, params: str):
     await sio.emit("answer_message", chat.to_message(params, sid))
+
+
+asgi = socketio.ASGIApp(sio)
